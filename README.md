@@ -4,6 +4,8 @@
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 ![Platform](https://img.shields.io/badge/platform-Windows-lightgrey.svg)
 ![Version](https://img.shields.io/badge/version-2.0-brightgreen.svg)
+![Branch](https://img.shields.io/badge/branch-main-blue.svg)
+![GitHub](https://img.shields.io/badge/GitHub-Yassen--gregorovich%2FGestionnaire-black.svg?logo=github)
 
 Un gestionnaire de logiciels Windows moderne et compact avec interface graphique permettant d'installer et gérer facilement vos applications préférées.
 
