@@ -24,8 +24,8 @@ Un gestionnaire de logiciels Windows moderne et compact avec interface graphique
 
 ### Installation rapide
 ```bash
-git clone https://github.com/votre-username/Gestionnaires.git
-cd Gestionnaires && pip install -r requirements.txt
+git clone https://github.com/Yassen-gregorovich/Gestionnaire.git
+cd Gestionnaire && pip install -r requirements.txt
 python PYTHON/app.py
 ```
 
@@ -95,8 +95,8 @@ git push origin feature/nom-feature
 
 ## 🤝 Support
 
-- 🐛 [Issues](https://github.com/votre-username/Gestionnaires/issues)
-- 💬 [Discussions](https://github.com/votre-username/Gestionnaires/discussions)
+- 🐛 [Issues](https://github.com/Yassen-gregorovich/Gestionnaire/issues)
+- 💬 [Discussions](https://github.com/Yassen-gregorovich/Gestionnaire/discussions)
 - 📖 Logs : `logs/gestionnaire_YYYYMMDD.log`
 
 ## 📄 Licence
@@ -109,7 +109,7 @@ MIT License - Libre d'utilisation commerciale et personnelle.
 
 **⭐ Si ce projet vous aide, donnez-lui une étoile ! ⭐**
 
-[![GitHub stars](https://img.shields.io/github/stars/votre-username/Gestionnaires?style=social)](https://github.com/votre-username/Gestionnaires)
+[![GitHub stars](https://img.shields.io/github/stars/Yassen-gregorovich/Gestionnaire?style=social)](https://github.com/Yassen-gregorovich/Gestionnaire)
 
 *Développé avec ❤️ pour simplifier la gestion de logiciels Windows*
 
@@ -155,8 +155,8 @@ MIT License - Libre d'utilisation commerciale et personnelle.
 ### Installation rapide
 ```bash
 # Cloner le repository
-git clone https://github.com/votre-username/Gestionnaires.git
-cd Gestionnaires
+git clone https://github.com/Yassen-gregorovich/Gestionnaire.git
+cd Gestionnaire
 
 # Installer les dépendances
 pip install -r requirements.txt
@@ -251,7 +251,7 @@ Gestionnaires/
 
 ### 🤝 Contribuer
 1. **Fork** le projet sur GitHub
-2. **Clone** votre fork : `git clone https://github.com/votre-username/Gestionnaires.git`
+2. **Clone** votre fork : `git clone https://github.com/votre-username/Gestionnaire.git`
 3. **Créez** une branche : `git checkout -b feature/amazing-feature`
 4. **Développez** avec les bonnes pratiques :
    - Code compact et lisible
