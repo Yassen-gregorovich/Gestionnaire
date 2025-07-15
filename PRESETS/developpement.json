@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Visual Studio Code",
+    "type": "WINGET",
+    "command": "Microsoft.VisualStudioCode",
+    "arguments": "",
+    "selected": false
+  },
+  {
+    "name": "Git",
+    "type": "WINGET", 
+    "command": "Git.Git",
+    "arguments": "",
+    "selected": false
+  },
+  {
+    "name": "Node.js",
+    "type": "WINGET",
+    "command": "OpenJS.NodeJS",
+    "arguments": "",
+    "selected": false
+  },
+  {
+    "name": "Python",
+    "type": "WINGET",
+    "command": "Python.Python.3.12",
+    "arguments": "",
+    "selected": false
+  },
+  {
+    "name": "Docker Desktop",
+    "type": "WINGET",
+    "command": "Docker.DockerDesktop",
+    "arguments": "",
+    "selected": false
+  },
+  {
+    "name": "Postman",
+    "type": "WINGET",
+    "command": "Postman.Postman",
+    "arguments": "",
+    "selected": false
+  },
+  {
+    "name": "GitHub Desktop",
+    "type": "WINGET",
+    "command": "GitHub.GitHubDesktop",
+    "arguments": "",
+    "selected": false
+  },
+  {
+    "name": "Notepad++",
+    "type": "WINGET",
+    "command": "Notepad++.Notepad++",
+    "arguments": "",
+    "selected": false
+  }
+]

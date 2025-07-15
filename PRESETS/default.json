@@ -1,0 +1,37 @@
+[
+  {
+    "name": "7-Zip",
+    "type": "WINGET",
+    "command": "7zip.7zip",
+    "arguments": "",
+    "selected": true
+  },
+  {
+    "name": "Microsoft Office",
+    "type": "MSI",
+    "command": "office_installer.msi",
+    "arguments": "/quiet",
+    "selected": true
+  },
+  {
+    "name": "Google Chrome",
+    "type": "WINGET",
+    "command": "Google.Chrome",
+    "arguments": "",
+    "selected": true
+  },
+  {
+    "name": "Test Ping Google",
+    "type": "CMD",
+    "command": "ping 8.8.8.8",
+    "arguments": "-t",
+    "selected": false
+  },
+  {
+    "name": "Get System Info",
+    "type": "POWERSHELL",
+    "command": "Get-ComputerInfo",
+    "arguments": "| Select-Object WindowsProductName, WindowsVersion, TotalPhysicalMemory",
+    "selected": false
+  }
+]

@@ -1,0 +1,51 @@
+[
+  {
+    "name": "LibreOffice",
+    "type": "WINGET",
+    "command": "TheDocumentFoundation.LibreOffice",
+    "arguments": "",
+    "selected": false
+  },
+  {
+    "name": "Adobe Acrobat Reader",
+    "type": "WINGET",
+    "command": "Adobe.Acrobat.Reader.64-bit",
+    "arguments": "",
+    "selected": false
+  },
+  {
+    "name": "7-Zip",
+    "type": "WINGET",
+    "command": "7zip.7zip",
+    "arguments": "",
+    "selected": false
+  },
+  {
+    "name": "Google Chrome",
+    "type": "WINGET",
+    "command": "Google.Chrome",
+    "arguments": "",
+    "selected": false
+  },
+  {
+    "name": "Mozilla Firefox",
+    "type": "WINGET",
+    "command": "Mozilla.Firefox",
+    "arguments": "",
+    "selected": false
+  },
+  {
+    "name": "Microsoft Teams",
+    "type": "WINGET",
+    "command": "Microsoft.Teams",
+    "arguments": "",
+    "selected": false
+  },
+  {
+    "name": "Zoom",
+    "type": "WINGET",
+    "command": "Zoom.Zoom",
+    "arguments": "",
+    "selected": false
+  }
+]

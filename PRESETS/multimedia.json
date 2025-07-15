@@ -1,0 +1,51 @@
+[
+  {
+    "name": "VLC Media Player",
+    "type": "WINGET",
+    "command": "VideoLAN.VLC",
+    "arguments": "",
+    "selected": false
+  },
+  {
+    "name": "GIMP",
+    "type": "WINGET",
+    "command": "GIMP.GIMP",
+    "arguments": "",
+    "selected": false
+  },
+  {
+    "name": "Audacity",
+    "type": "WINGET",
+    "command": "Audacity.Audacity",
+    "arguments": "",
+    "selected": false
+  },
+  {
+    "name": "OBS Studio",
+    "type": "WINGET",
+    "command": "OBSProject.OBSStudio",
+    "arguments": "",
+    "selected": false
+  },
+  {
+    "name": "Blender",
+    "type": "WINGET",
+    "command": "BlenderFoundation.Blender",
+    "arguments": "",
+    "selected": false
+  },
+  {
+    "name": "Paint.NET",
+    "type": "WINGET",
+    "command": "dotPDN.PaintDotNet",
+    "arguments": "",
+    "selected": false
+  },
+  {
+    "name": "HandBrake",
+    "type": "WINGET",
+    "command": "HandBrake.HandBrake",
+    "arguments": "",
+    "selected": false
+  }
+]

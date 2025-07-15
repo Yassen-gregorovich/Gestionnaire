@@ -1,0 +1,373 @@
+[
+  {
+    "name": "� Informations système complètes",
+    "type": "CMD",
+    "command": "systeminfo",
+    "arguments": "",
+    "selected": false
+  },
+  {
+    "name": "💻 Gestionnaire des tâches",
+    "type": "CMD",
+    "command": "taskmgr",
+    "arguments": "",
+    "selected": false
+  },
+  {
+    "name": "🔧 Informations système (msinfo32)",
+    "type": "CMD",
+    "command": "msinfo32",
+    "arguments": "",
+    "selected": false
+  },
+  {
+    "name": "📊 Gestionnaire de périphériques",
+    "type": "CMD",
+    "command": "devmgmt.msc",
+    "arguments": "",
+    "selected": false
+  },
+  {
+    "name": "💾 Gestionnaire de disques",
+    "type": "CMD",
+    "command": "diskmgmt.msc",
+    "arguments": "",
+    "selected": false
+  },
+  {
+    "name": "⚙️ Services Windows",
+    "type": "CMD",
+    "command": "services.msc",
+    "arguments": "",
+    "selected": false
+  },
+  {
+    "name": "🔐 Utilisateurs et groupes locaux",
+    "type": "CMD",
+    "command": "lusrmgr.msc",
+    "arguments": "",
+    "selected": false
+  },
+  {
+    "name": "📈 Moniteur de performances",
+    "type": "CMD",
+    "command": "perfmon.msc",
+    "arguments": "",
+    "selected": false
+  },
+  {
+    "name": "🔍 Observateur d'événements",
+    "type": "CMD",
+    "command": "eventvwr.msc",
+    "arguments": "",
+    "selected": false
+  },
+  {
+    "name": "🌐 Configuration réseau",
+    "type": "CMD",
+    "command": "ncpa.cpl",
+    "arguments": "",
+    "selected": false
+  },
+  {
+    "name": "🔧 Variables d'environnement",
+    "type": "CMD",
+    "command": "rundll32",
+    "arguments": "sysdm.cpl,EditEnvironmentVariables",
+    "selected": false
+  },
+  {
+    "name": "�🔄 Mise à jour stratégies groupe",
+    "type": "CMD",
+    "command": "gpupdate",
+    "arguments": "/force",
+    "selected": false
+  },
+  {
+    "name": "🔍 Vérification fichiers système (SFC)",
+    "type": "CMD",
+    "command": "sfc",
+    "arguments": "/scannow",
+    "selected": false
+  },
+  {
+    "name": "🛠 Réparation image système (DISM)",
+    "type": "CMD",
+    "command": "dism",
+    "arguments": "/online /cleanup-image /restorehealth",
+    "selected": false
+  },
+  {
+    "name": "💾 Vérification disque C: (CHKDSK)",
+    "type": "CMD",
+    "command": "chkdsk",
+    "arguments": "C: /f /r",
+    "selected": false
+  },
+  {
+    "name": "🔧 Nettoyage composants Windows",
+    "type": "CMD",
+    "command": "dism",
+    "arguments": "/online /cleanup-image /startcomponentcleanup",
+    "selected": false
+  },
+  {
+    "name": "📊 Analyse santé image système",
+    "type": "CMD",
+    "command": "dism",
+    "arguments": "/online /cleanup-image /scanhealth",
+    "selected": false
+  },
+  {
+    "name": "🌐 Reset configuration réseau",
+    "type": "CMD",
+    "command": "netsh",
+    "arguments": "winsock reset",
+    "selected": false
+  },
+  {
+    "name": "🔌 Reset pile TCP/IP",
+    "type": "CMD",
+    "command": "netsh",
+    "arguments": "int ip reset",
+    "selected": false
+  },
+  {
+    "name": "📡 Vider cache DNS",
+    "type": "CMD",
+    "command": "ipconfig",
+    "arguments": "/flushdns",
+    "selected": false
+  },
+  {
+    "name": "🔄 Renouveler configuration IP",
+    "type": "CMD",
+    "command": "ipconfig",
+    "arguments": "/release && ipconfig /renew",
+    "selected": false
+  },
+  {
+    "name": "👤 Lister utilisateurs locaux",
+    "type": "CMD",
+    "command": "net",
+    "arguments": "user",
+    "selected": false
+  },
+  {
+    "name": "👥 Lister groupes locaux",
+    "type": "CMD",
+    "command": "net",
+    "arguments": "localgroup",
+    "selected": false
+  },
+  {
+    "name": "🔑 Voir stratégies mot de passe",
+    "type": "CMD",
+    "command": "net",
+    "arguments": "accounts",
+    "selected": false
+  },
+  {
+    "name": "⚙️ Lister tous les services",
+    "type": "CMD",
+    "command": "sc",
+    "arguments": "query",
+    "selected": false
+  },
+  {
+    "name": "🔋 Configuration alimentation",
+    "type": "CMD",
+    "command": "powercfg",
+    "arguments": "/list",
+    "selected": false
+  },
+  {
+    "name": "💤 Désactiver hibernation",
+    "type": "CMD",
+    "command": "powercfg",
+    "arguments": "/hibernate off",
+    "selected": false
+  },
+  {
+    "name": "🔍 Rapport énergétique",
+    "type": "CMD",
+    "command": "powercfg",
+    "arguments": "/energy",
+    "selected": false
+  },
+  {
+    "name": "🗂 Nettoyage fichiers temporaires",
+    "type": "CMD",
+    "command": "cleanmgr",
+    "arguments": "/sagerun:1",
+    "selected": false
+  },
+  {
+    "name": "📋 Informations système détaillées",
+    "type": "CMD",
+    "command": "systeminfo",
+    "arguments": "",
+    "selected": false
+  },
+  {
+    "name": "🔄 Redémarrer service Spooler",
+    "type": "CMD",
+    "command": "net",
+    "arguments": "stop spooler && net start spooler",
+    "selected": false
+  },
+  {
+    "name": "🌐 Redémarrer service DNS Client",
+    "type": "CMD",
+    "command": "net",
+    "arguments": "stop dnscache && net start dnscache",
+    "selected": false
+  },
+  {
+    "name": "🔧 Réparation magasin composants",
+    "type": "CMD",
+    "command": "dism",
+    "arguments": "/online /cleanup-image /restorehealth /source:C:\\Windows\\WinSxS",
+    "selected": false
+  },
+  {
+    "name": "📊 Vérifier intégrité disque système",
+    "type": "CMD",
+    "command": "chkdsk",
+    "arguments": "%systemdrive% /f",
+    "selected": false
+  },
+  {
+    "name": "🔐 Export stratégies sécurité",
+    "type": "CMD",
+    "command": "secedit",
+    "arguments": "/export /cfg C:\\security_config.inf",
+    "selected": false
+  },
+  {
+    "name": "🗃 Défragmentation disque C:",
+    "type": "CMD",
+    "command": "defrag",
+    "arguments": "C: /O",
+    "selected": false
+  },
+  {
+    "name": "🧹 Nettoyage avancé disque",
+    "type": "CMD",
+    "command": "cleanmgr",
+    "arguments": "/d C:",
+    "selected": false
+  },
+  {
+    "name": "📝 Créer rapport DirectX",
+    "type": "CMD",
+    "command": "dxdiag",
+    "arguments": "/t C:\\dxdiag_report.txt",
+    "selected": false
+  },
+  {
+    "name": "🔄 Reset Windows Update",
+    "type": "CMD",
+    "command": "net",
+    "arguments": "stop wuauserv && net stop cryptSvc && net stop bits && net stop msiserver && net start wuauserv && net start cryptSvc && net start bits && net start msiserver",
+    "selected": false
+  },
+  {
+    "name": "🛡 Scan antivirus Windows Defender",
+    "type": "POWERSHELL",
+    "command": "Start-MpScan",
+    "arguments": "-ScanType FullScan",
+    "selected": false
+  },
+  {
+    "name": "🔄 Mise à jour définitions Defender",
+    "type": "POWERSHELL",
+    "command": "Update-MpSignature",
+    "arguments": "",
+    "selected": false
+  },
+  {
+    "name": "📊 Rapport santé PC",
+    "type": "POWERSHELL",
+    "command": "Get-ComputerInfo",
+    "arguments": "| Select-Object WindowsProductName, WindowsVersion, WindowsBuildLabEx, TotalPhysicalMemory",
+    "selected": false
+  },
+  {
+    "name": "🗂 Nettoyage EventLog",
+    "type": "POWERSHELL",
+    "command": "Get-EventLog",
+    "arguments": "-List | ForEach-Object { Clear-EventLog -LogName $_.Log }",
+    "selected": false
+  },
+  {
+    "name": "🔍 Vérifier pilotes problématiques",
+    "type": "POWERSHELL",
+    "command": "Get-WmiObject",
+    "arguments": "Win32_PnPEntity | Where-Object { $_.Status -eq 'Error' }",
+    "selected": false
+  },
+  {
+    "name": "💾 Créer point de restauration",
+    "type": "POWERSHELL",
+    "command": "Checkpoint-Computer",
+    "arguments": "-Description 'Point de restauration manuel'",
+    "selected": false
+  },
+  {
+    "name": "🔧 Réparation WMI",
+    "type": "CMD",
+    "command": "winmgmt",
+    "arguments": "/resetrepository",
+    "selected": false
+  },
+  {
+    "name": "📡 Test connectivité DNS",
+    "type": "CMD",
+    "command": "nslookup",
+    "arguments": "google.com",
+    "selected": false
+  },
+  {
+    "name": "🌐 Test ping Google",
+    "type": "CMD",
+    "command": "ping",
+    "arguments": "8.8.8.8 -t",
+    "selected": true
+  },
+  {
+    "name": "📊 Afficher configuration IP",
+    "type": "CMD",
+    "command": "ipconfig",
+    "arguments": "/all",
+    "selected": false
+  },
+  {
+    "name": "🔄 Redémarrer Windows Explorer",
+    "type": "CMD",
+    "command": "taskkill",
+    "arguments": "/f /im explorer.exe && start explorer.exe",
+    "selected": false
+  },
+  {
+    "name": "🛠 Réenregistrer DLL système",
+    "type": "CMD",
+    "command": "for",
+    "arguments": "%i in (%windir%\\system32\\*.dll) do regsvr32 /s \"%i\"",
+    "selected": false
+  },
+  {
+    "name": "🗃 Vérifier base registre",
+    "type": "CMD",
+    "command": "sfc",
+    "arguments": "/verifyonly",
+    "selected": false
+  },
+  {
+    "name": "🔧 Réparation boot Windows",
+    "type": "CMD",
+    "command": "bootrec",
+    "arguments": "/fixmbr && bootrec /fixboot && bootrec /rebuildbcd",
+    "selected": false
+  }
+]

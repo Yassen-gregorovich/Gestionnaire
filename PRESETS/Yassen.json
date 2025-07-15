@@ -1,0 +1,170 @@
+[
+  {
+    "name": "Désactiver les notifications UAC",
+    "type": "POWERSHELL",
+    "command": "Set-ItemProperty -Path 'HKLM:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System' -Name 'ConsentPromptBehaviorAdmin' -Value 0",
+    "arguments": "",
+    "selected": true
+  },
+  {
+    "name": "Petites icônes du bureau",
+    "type": "POWERSHELL",
+    "command": "Set-ItemProperty -Path 'HKCU:\\Software\\Microsoft\\Windows\\Shell\\Bags\\1\\Desktop' -Name 'IconSize' -Value 32",
+    "arguments": "",
+    "selected": true
+  },
+  {
+    "name": "Masquer icône de conversation barre des tâches",
+    "type": "POWERSHELL",
+    "command": "Set-ItemProperty -Path 'HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Advanced' -Name 'TaskbarMn' -Value 0",
+    "arguments": "",
+    "selected": true
+  },
+  {
+    "name": "Masquer barre de recherche barre des tâches",
+    "type": "POWERSHELL",
+    "command": "Set-ItemProperty -Path 'HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Search' -Name 'SearchboxTaskbarMode' -Value 0",
+    "arguments": "",
+    "selected": true
+  },
+  {
+    "name": "Déplacer barre des tâches à gauche",
+    "type": "POWERSHELL",
+    "command": "Set-ItemProperty -Path 'HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\StuckRects3' -Name 'Settings' -Value ([byte[]](0x30,0x00,0x00,0x00,0xfe,0xff,0xff,0xff,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x28,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00))",
+    "arguments": "",
+    "selected": true
+  },
+  {
+    "name": "Activer thème sombre Windows",
+    "type": "POWERSHELL",
+    "command": "Set-ItemProperty -Path 'HKCU:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Themes\\Personalize' -Name 'AppsUseLightTheme' -Value 0; Set-ItemProperty -Path 'HKCU:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Themes\\Personalize' -Name 'SystemUsesLightTheme' -Value 0",
+    "arguments": "",
+    "selected": true
+  },
+  {
+    "name": "Activer historique presse-papiers",
+    "type": "POWERSHELL",
+    "command": "Set-ItemProperty -Path 'HKCU:\\Software\\Microsoft\\Clipboard' -Name 'EnableClipboardHistory' -Value 1",
+    "arguments": "",
+    "selected": true
+  },
+  {
+    "name": "Plan d'alimentation haute performance",
+    "type": "POWERSHELL",
+    "command": "powercfg -setactive 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c",
+    "arguments": "",
+    "selected": true
+  },
+  {
+    "name": "Désactiver toutes les notifications Windows",
+    "type": "POWERSHELL",
+    "command": "Set-ItemProperty -Path 'HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\PushNotifications' -Name 'ToastEnabled' -Value 0; Set-ItemProperty -Path 'HKCU:\\Software\\Policies\\Microsoft\\Windows\\Explorer' -Name 'DisableNotificationCenter' -Value 1",
+    "arguments": "",
+    "selected": true
+  },
+  {
+    "name": "Désactiver amélioration précision souris",
+    "type": "POWERSHELL",
+    "command": "Set-ItemProperty -Path 'HKCU:\\Control Panel\\Mouse' -Name 'MouseAcceleration' -Value '0'",
+    "arguments": "",
+    "selected": true
+  },
+  {
+    "name": "Désactiver touches rémanentes",
+    "type": "POWERSHELL",
+    "command": "Set-ItemProperty -Path 'HKCU:\\Control Panel\\Accessibility\\StickyKeys' -Name 'Flags' -Value '506'",
+    "arguments": "",
+    "selected": true
+  },
+  {
+    "name": "Désactiver paramètres confidentialité télémétrie",
+    "type": "POWERSHELL",
+    "command": "Set-ItemProperty -Path 'HKCU:\\Software\\Microsoft\\Windows\\CurrentVersion\\Privacy' -Name 'TailoredExperiencesWithDiagnosticDataEnabled' -Value 0; Set-ItemProperty -Path 'HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\DataCollection' -Name 'AllowTelemetry' -Value 0",
+    "arguments": "",
+    "selected": true
+  },
+  {
+    "name": "Taux de rafraîchissement maximum",
+    "type": "POWERSHELL",
+    "command": "Add-Type -TypeDefinition 'using System; using System.Runtime.InteropServices; public class Display { [DllImport(\"user32.dll\")] public static extern bool EnumDisplaySettings(string deviceName, int modeNum, ref DEVMODE devMode); [DllImport(\"user32.dll\")] public static extern int ChangeDisplaySettings(ref DEVMODE devMode, int flags); [StructLayout(LayoutKind.Sequential)] public struct DEVMODE { [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 32)] public string dmDeviceName; public short dmSpecVersion; public short dmDriverVersion; public short dmSize; public short dmDriverExtra; public int dmFields; public int dmPositionX; public int dmPositionY; public int dmDisplayOrientation; public int dmDisplayFixedOutput; public short dmColor; public short dmDuplex; public short dmYResolution; public short dmTTOption; public short dmCollate; [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 32)] public string dmFormName; public short dmLogPixels; public int dmBitsPerPel; public int dmPelsWidth; public int dmPelsHeight; public int dmDisplayFlags; public int dmDisplayFrequency; public int dmICMMethod; public int dmICMIntent; public int dmMediaType; public int dmDitherType; public int dmReserved1; public int dmReserved2; public int dmPanningWidth; public int dmPanningHeight; } }'; $devMode = New-Object Display+DEVMODE; $devMode.dmSize = [System.Runtime.InteropServices.Marshal]::SizeOf($devMode); $maxRefresh = 0; $bestMode = $devMode; for ($i = 0; [Display]::EnumDisplaySettings($null, $i, [ref]$devMode); $i++) { if ($devMode.dmDisplayFrequency -gt $maxRefresh) { $maxRefresh = $devMode.dmDisplayFrequency; $bestMode = $devMode; } }; if ($maxRefresh -gt 60) { [Display]::ChangeDisplaySettings([ref]$bestMode, 0); Write-Host \"Taux de rafraîchissement configuré à $maxRefresh Hz\" }",
+    "arguments": "",
+    "selected": true
+  },
+  {
+    "name": "Désactiver Ctrl+Maj changement langue",
+    "type": "POWERSHELL",
+    "command": "Set-ItemProperty -Path 'HKCU:\\Keyboard Layout\\Toggle' -Name 'Hotkey' -Value '3'; Set-ItemProperty -Path 'HKCU:\\Keyboard Layout\\Toggle' -Name 'Language Hotkey' -Value '3'",
+    "arguments": "",
+    "selected": true
+  },
+  {
+    "name": "Redémarrer Explorer pour appliquer les changements",
+    "type": "POWERSHELL",
+    "command": "Stop-Process -Name explorer -Force; Start-Sleep -Seconds 2;",
+    "arguments": "",
+    "selected": true
+  },
+  {
+    "name": "Supprimer OneDrive",
+    "type": "POWERSHELL",
+    "command": "taskkill /f /im OneDrive.exe; Start-Sleep -Seconds 2; if (Test-Path \"$env:SYSTEMROOT\\System32\\OneDriveSetup.exe\") { & \"$env:SYSTEMROOT\\System32\\OneDriveSetup.exe\" /uninstall } elseif (Test-Path \"$env:SYSTEMROOT\\SysWOW64\\OneDriveSetup.exe\") { & \"$env:SYSTEMROOT\\SysWOW64\\OneDriveSetup.exe\" /uninstall }; Start-Sleep -Seconds 3; Remove-Item -Recurse -Force \"$env:USERPROFILE\\OneDrive\" -ErrorAction SilentlyContinue; Remove-Item -Recurse -Force \"$env:LOCALAPPDATA\\Microsoft\\OneDrive\" -ErrorAction SilentlyContinue; Remove-Item -Recurse -Force \"$env:PROGRAMDATA\\Microsoft OneDrive\" -ErrorAction SilentlyContinue; Set-ItemProperty -Path 'HKLM:\\SOFTWARE\\Policies\\Microsoft\\Windows\\OneDrive' -Name 'DisableFileSyncNGSC' -Value 1 -ErrorAction SilentlyContinue",
+    "arguments": "",
+    "selected": true
+  },
+  {
+    "name": "Installer NVIDIA Profile Inspector",
+    "type": "WINGET",
+    "command": "winget install --id=Orbmu2k.NvidiaProfileInspector -e",
+    "arguments": "",
+    "selected": true
+  },
+  {
+    "name": "Installer Google Chrome",
+    "type": "WINGET",
+    "command": "winget install Chrome ",
+    "arguments": "-h",
+    "selected": true
+  },
+  {
+    "name": "Installer Discord",
+    "type": "WINGET",
+    "command": "winget install --id=Discord.Discord -e",
+    "arguments": "",
+    "selected": true
+  },
+  {
+    "name": "Installer Logitech G HUB",
+    "type": "WINGET",
+    "command": "winget install --id=Logitech.GHUB -e",
+    "arguments": "",
+    "selected": true
+  },
+  {
+    "name": "Installer KeePass",
+    "type": "WINGET",
+    "command": "winget install --id=DominikReichl.KeePass -e",
+    "arguments": "",
+    "selected": true
+  },
+  {
+    "name": "Installer Visual Studio Code",
+    "type": "WINGET",
+    "command": "winget install --id=Microsoft.VisualStudioCode -e",
+    "arguments": "",
+    "selected": true
+  },
+  {
+    "name": "Activer gestionnaire Hyper-V",
+    "type": "POWERSHELL",
+    "command": "Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V-All -All",
+    "arguments": "",
+    "selected": true
+  },
+  {
+    "name": "Mises à jour Windows",
+    "type": "POWERSHELL",
+    "command": "Install-Module PSWindowsUpdate -Force -SkipPublisherCheck; Import-Module PSWindowsUpdate; Get-WindowsUpdate -AcceptAll -AutoReboot",
+    "arguments": "",
+    "selected": true
+  }
+]
